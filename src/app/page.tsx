@@ -1,10 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import Image from "next/image"
 import Chart from "./components/ui/Chart"
 import { Alert, useAlert } from "./components/ui/Alert"
-import Header from './components/layout/Header'
 
 export default function Home() {
   const { showAlert } = useAlert()
