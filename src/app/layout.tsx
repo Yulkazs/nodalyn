@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { AlertProvider } from './components/ui/Alert'
+import { ThemeProvider } from './contexts/ThemeContext'
+import Header from './components/layout/Header'
 import "./globals.css";
 
 const poppins = Poppins({
@@ -21,7 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} antialiased`}>
-        {children}
+        <ThemeProvider>
+          <AlertProvider>
+            <Header />
+            {children}
+          </AlertProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
