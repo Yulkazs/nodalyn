@@ -14,9 +14,15 @@ export default function Header() {
   }, [])
 
   function toggleTheme() {
-    // Directly toggle between 'light' and 'dark'
-    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
-    console.log('Toggling theme to:', resolvedTheme === 'dark' ? 'light' : 'dark')
+    // Get the current theme
+    const currentTheme = resolvedTheme || 'light'
+    // Set the theme to the opposite of the current theme
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
+    
+    console.log('Current theme:', currentTheme)
+    console.log('Setting theme to:', newTheme)
+    
+    setTheme(newTheme)
   }
 
   return (

@@ -18,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.variable} antialiased min-h-screen bg-white dark:bg-[#060806] text-black dark:text-white transition-colors`}>
+      <body className={`${poppins.variable} antialiased min-h-screen dark:bg-[#060806] dark:text-white transition-colors`}>
         <ThemeProvider>
           <AlertProvider>
             <Header />
