@@ -26,15 +26,15 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white dark:bg-[#060806] z-10 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 dark:bg-gray-900 z-10 shadow-sm transition-colors">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="font-semibold text-lg text-black dark:text-white">Nodalyn</div>
+        <div className="font-semibold text-lg dark:text-white">Nodalyn</div>
         
         {mounted && (
           <button 
             onClick={toggleTheme}
-            className="p-2 rounded-full bg-[#e6e8e6] dark:bg-[#2b2b2b] text-black dark:text-white 
-                     hover:bg-gray-200 dark:hover:bg-gray-700"
+            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 dark:text-white 
+                     hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
             aria-label="Toggle theme"
           >
             {resolvedTheme === 'dark' ? (

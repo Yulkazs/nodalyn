@@ -18,14 +18,14 @@ export default function Home() {
       <h1 className="text-3xl font-bold mb-6 text-black dark:text-white">Welcome to the Theme Switcher!</h1>
       
       <div className="grid gap-6 md:grid-cols-2">
-        <div className="bg-[#e6e8e6] dark:bg-[#2b2b2b] p-6 rounded-lg shadow-md">
+        <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors">
           <h2 className="text-xl font-semibold mb-2 text-black dark:text-white">Light/Dark Theme</h2>
-          <p className="text-black dark:text-white">This container will change colors based on the selected theme. Click the Sun/Moon icon in the header to toggle between light and dark modes.</p>
+          <p className="text-gray-700 dark:text-gray-300">This container will change colors based on the selected theme. Click the Sun/Moon icon in the header to toggle between light and dark modes.</p>
         </div>
         
-        <div className="bg-[#e6e8e6] dark:bg-[#2b2b2b] p-6 rounded-lg shadow-md">
+        <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md transition-colors">
           <h2 className="text-xl font-semibold mb-2 text-black dark:text-white">Theme Features</h2>
-          <ul className="list-disc list-inside space-y-1 text-black dark:text-white">
+          <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
             <li>System preference detection</li>
             <li>Theme persistence across sessions</li>
             <li>Smooth transition animations</li>
