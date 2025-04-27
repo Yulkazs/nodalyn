@@ -35,7 +35,7 @@ export default function Header() {
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-sm' 
+        ? 'bg-white/20 dark:bg-gray-900/80 backdrop-blur-xl backdrop-opacity-95 shadow-sm' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +43,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">CryptoVision</span>
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Nodalyn</span>
             </Link>
           </div>
 

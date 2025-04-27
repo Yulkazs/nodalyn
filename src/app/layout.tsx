@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata } from "next";  
 import { Poppins } from "next/font/google";
 import { AlertProvider } from './components/ui/Alert'
 import { ThemeProvider } from './contexts/ThemeContext'
@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "CryptoVision | Cryptocurrency Information & Statistics",
+  title: "Nodalyn",
   description: "Explore the world of cryptocurrencies with real-time data, educational resources, and market analysis.",
 };
 
@@ -23,12 +23,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.variable} antialiased min-h-screen flex flex-col`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${poppins.variable} antialiased min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-white`}>
         <ThemeProvider>
           <AlertProvider>
             <Header />
-            <main className="flex-grow">{children}</main>
+            <main className="flex-grow pt-16">{children}</main>
             <Footer />
           </AlertProvider>
         </ThemeProvider>

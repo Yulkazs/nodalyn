@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  /* Light mode color variables */
   --background: #ffffff;
   --foreground: #171717;
   --primary: #3b82f6;
@@ -16,9 +17,11 @@
   --border: #e5e7eb;
   --input: #e5e7eb;
   --ring: #3b82f6;
+  --font-sans: 'Helvetica Neue', sans-serif; /* Define font family */
 }
 
 .dark {
+  /* Dark mode color variables */
   --background: #0a0a0a;
   --foreground: #ededed;
   --primary: #3b82f6;
@@ -34,20 +37,41 @@
   --border: #374151;
   --input: #374151;
   --ring: #3b82f6;
+  --font-sans: 'Helvetica Neue', sans-serif; /* Dark mode font family */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-poppins), Arial, sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
+@layer base {
+  /* Body styling */
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+
+  /* Headings styling */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--foreground);
+  }
+
+  /* Link styling */
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition for links */
+  }
+
+  a:hover {
+    color: var(--primary-foreground);
+  }
+
+  /* Images and SVGs */
+  img, svg {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* 🌙 Smooth Theme Transitions */
+/* Global transition for smooth theme changes */
 @media (prefers-reduced-motion: no-preference) {
   html, body, * {
     transition:
@@ -56,6 +80,11 @@
       border-color 0.3s ease,
       fill 0.3s ease,
       stroke 0.3s ease;
+  }
+  
+  /* Ensure headings and links transition smoothly */
+  h1, h2, h3, h4, h5, h6, a {
+    transition: color 0.3s ease;
   }
 }
 
@@ -68,7 +97,6 @@ body {
   min-height: 100vh;
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;

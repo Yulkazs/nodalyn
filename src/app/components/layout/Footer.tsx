@@ -5,13 +5,13 @@ import { Twitter, Github, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+    <footer className=" dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">CryptoVision</span>
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Nodalyn</span>
             </Link>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               Empowering you with cryptocurrency knowledge and insights
@@ -25,8 +25,6 @@ export default function Footer() {
               </a>
               <a href="https://linkedin.com" className="text-gray-500 hover:text-blue-700 dark:hover:text-blue-400" aria-label="LinkedIn">
                 <Linkedin size={20} />
-              </a>
-              <a href="https://discord.com" className="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400" aria-label="Discord">
               </a>
             </div>
           </div>
@@ -100,7 +98,7 @@ export default function Footer() {
         
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
           <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
-            © {new Date().getFullYear()} CryptoVision. All rights reserved.
+            © {new Date().getFullYear()} Nodalyn. All rights reserved.
           </p>
         </div>
       </div>
