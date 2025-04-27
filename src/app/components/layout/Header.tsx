@@ -22,13 +22,9 @@ export default function Header() {
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
     { name: 'Crypto Basics', href: '/crypto-basics' },
     { name: 'Market', href: '/market' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'News', href: '/news' },
     { name: 'Glossary', href: '/glossary' },
-    { name: 'FAQ', href: '/faq' },
     { name: 'Contact', href: '/contact' },
   ]
 
