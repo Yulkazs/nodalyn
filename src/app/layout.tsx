@@ -1,5 +1,7 @@
 import { Poppins } from 'next/font/google';
 import { AlertProvider } from './components/ui/Alert';
+import { ThemeProvider } from './components/ui/ThemeProvider';
+import Header from './components/layout/Header';
 import './globals.css';
 
 const poppins = Poppins({
@@ -16,10 +18,13 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.variable} antialiased min-h-screen`}>
+      <body className={`${poppins.variable} antialiased min-h-screen bg-white dark:bg-[#060806] text-black dark:text-white transition-colors`}>
+        <ThemeProvider>
           <AlertProvider>
+            <Header />
             <main className="flex-grow pt-16">{children}</main>
           </AlertProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
